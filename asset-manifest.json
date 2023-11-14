@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Noxe/static/css/main.0728bce5.css",
-    "main.js": "/Noxe/static/js/main.1ced47b2.js",
+    "main.js": "/Noxe/static/js/main.60a9ea81.js",
     "static/js/787.c8163530.chunk.js": "/Noxe/static/js/787.c8163530.chunk.js",
     "static/media/title-image-1.webp": "/Noxe/static/media/title-image-1.eb5e2899315f131fed94.eb5e2899315f131fed94.webp",
     "static/media/fa-solid-900.ttf": "/Noxe/static/media/fa-solid-900.d75e3fd1eb12e9bd6655.ttf",
@@ -16,11 +16,11 @@
     "index.html": "/Noxe/index.html",
     "static/media/logo-dark.webp": "/Noxe/static/media/logo-dark.5aab8137fe2130969ca6.webp",
     "main.0728bce5.css.map": "/Noxe/static/css/main.0728bce5.css.map",
-    "main.1ced47b2.js.map": "/Noxe/static/js/main.1ced47b2.js.map",
+    "main.60a9ea81.js.map": "/Noxe/static/js/main.60a9ea81.js.map",
     "787.c8163530.chunk.js.map": "/Noxe/static/js/787.c8163530.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.0728bce5.css",
-    "static/js/main.1ced47b2.js"
+    "static/js/main.60a9ea81.js"
   ]
 }
