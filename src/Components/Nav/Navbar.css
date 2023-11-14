@@ -1,0 +1,22 @@
+.navbar {
+    box-shadow: 0 0 13px 3px rgba(0,0,0,.5);  
+
+  }
+nav a 
+{
+    color: #fff !important ;
+    padding-right: 10px !important;
+    font-size: 20px  !important;
+}  
+.icon
+{
+  color: #fff;
+}
+nav a:active 
+{
+    color: #b82626 !important ;
+    padding-right: 10px !important;
+    font-size: 20px  !important;
+}  
+
+

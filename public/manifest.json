@@ -1,0 +1,16 @@
+{
+  "name": "Noxe",
+  "short_name": "Noxe",
+  "description": "Description of my app.",
+  "start_url": "/Noxe",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "192x192",
+      "type": "./src/Components/image/person.jpg"
+    }
+  ]
+}

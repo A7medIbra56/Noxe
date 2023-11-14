@@ -1,0 +1,35 @@
+h2
+{
+    color: #fff;
+}
+.form-group
+{margin: auto;
+  margin-bottom: 20px;
+  width: 70%;
+}
+.form-group label
+{
+    color: #fff !important;
+    margin-bottom: 10px;
+}
+.form-group input
+{
+    background-color: #131722;
+    padding: 5px;
+    border-radius: 5px;
+    color: #fff;
+border:solid 1px #fff;}
+.showError
+{
+    padding: 10px;
+    color: red;
+}
+.Register
+{
+    background-color: rgb(63, 89, 137);
+    border:solid 0px;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+}

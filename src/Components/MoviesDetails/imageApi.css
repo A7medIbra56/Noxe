@@ -1,0 +1,13 @@
+
+.image-container
+{
+
+    background-image: 100%;
+    background-position: center;
+    background-size: cover; 
+    background-color: rgba(31.5, 31.5, 31.5, 1);
+}
+.rgbaBg
+{
+ background-color: rgba(31.5, 31.5, 31.5, 0.5);
+}
