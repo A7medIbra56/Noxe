@@ -9,7 +9,6 @@ export default function Home() {
   const [trendingPerson, setTrendingPerson] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
-
   async function getMovies(Movies, callback) {
     setIsLoading(true);
     const res = await axios.get(
@@ -33,52 +32,52 @@ export default function Home() {
             <div className="row">
               <div className="col-12">
                 <div className="imgHad">
-                  
-                <div className="Hide">
-               
-                    <div id="carouselExampleIndicators" className="carousel slide">
-                      
+                  <div className="Hide">
+                    <div
+                      id="carouselExampleIndicators"
+                      className="carousel slide"
+                    >
                       <div className="carousel-inner">
-                     
-                          <div className="carousel-item active">
+                        <div className="carousel-item active">
                           <div className="container">
-                          <h2 className="h1"><strong>OUR LATEST MOVIES</strong> </h2>
+                            <h2 className="h1">
+                              <strong>OUR LATEST MOVIES</strong>{" "}
+                            </h2>
                           </div>
-                            <div className="container">
-                              <div className="row">
-                                {trendingMove.slice(0, 6).map((item, i) => (
-                                  <div key={i} className="col-md-2 ">
-                                    <img
-                                      className="w-100 rounded-3"
-                                      src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${item.poster_path}`}
-                                      alt="Atul Prajapati"
-                                    ></img>
-                                  </div>
-                                ))}
-                              </div>
+                          <div className="container">
+                            <div className="row">
+                              {trendingMove.slice(0, 6).map((item, i) => (
+                                <div key={i} className="col-md-2 ">
+                                  <img
+                                    className="w-100 rounded-3"
+                                    src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${item.poster_path}`}
+                                    alt="Atul Prajapati"
+                                  ></img>
+                                </div>
+                              ))}
                             </div>
                           </div>
-                          <div className="carousel-item">
+                        </div>
+                        <div className="carousel-item">
                           <div className="container">
-                          <h2 className="h1"><strong>OUR LATEST TV</strong> </h2>
+                            <h2 className="h1">
+                              <strong>OUR LATEST TV</strong>{" "}
+                            </h2>
                           </div>
-                            <div className="container">
-                              <div className="row">
-                                {trendingTv.slice(0, 6).map((item, i) => (
-                                  <div  key={i}  className="col-md-2 ">
-                                    <img
-                                      className="w-100 rounded-3"
-                                      src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${item.poster_path}`}
-                                      alt="Atul Prajapati"
-                                    ></img>
-                                  </div>
-                                ))}
-                              </div>
+                          <div className="container">
+                            <div className="row">
+                              {trendingTv.slice(0, 6).map((item, i) => (
+                                <div key={i} className="col-md-2 ">
+                                  <img
+                                    className="w-100 rounded-3"
+                                    src={`https://www.themoviedb.org/t/p/w300_and_h450_bestv2${item.poster_path}`}
+                                    alt="Atul Prajapati"
+                                  ></img>
+                                </div>
+                              ))}
                             </div>
                           </div>
-                       
-                         
-                       
+                        </div>
                       </div>
                       <div className="carousel-indicators position-relative mt-4">
                         <button
@@ -96,12 +95,9 @@ export default function Home() {
                           data-bs-slide-to="1"
                           aria-label="Slide 2"
                         ></button>
-                     
                       </div>
                     </div>
                   </div>
-                
-                  
                 </div>
               </div>
             </div>
@@ -131,30 +127,31 @@ export default function Home() {
                       className="progress dai-progress  rounded-0"
                       role="progressbar"
                     >
-                    {
-                      Math.floor(item.vote_average*10) <= 70 ? <div
-                      className="dai-bar bar1 progress-bar "
-                      style={{ width: `${item.vote_average*10}%` }}
-                    >
-                      <div className="progressDetails pt-3 d-flex">
-                        <p>
-                        {Math.floor(item.vote_average*10)} <span className="fe100">%</span>
-                        </p>
-                      </div>
-                    </div> :<div
-                      className="dai-bar bar2 progress-bar "
-                      style={{ width: `${item.vote_average*10}%` }}
-                    >
-                      <div className="progressDetails pt-3 d-flex">
-                        <p>
-                        {Math.floor(item.vote_average*10)} <span className="fe100">%</span>
-                        </p>
-                      </div>
-                    </div>
-                    }
-
-
-                      
+                      {Math.floor(item.vote_average * 10) <= 70 ? (
+                        <div
+                          className="dai-bar bar1 progress-bar "
+                          style={{ width: `${item.vote_average * 10}%` }}
+                        >
+                          <div className="progressDetails pt-3 d-flex">
+                            <p>
+                              {Math.floor(item.vote_average * 10)}{" "}
+                              <span className="fe100">%</span>
+                            </p>
+                          </div>
+                        </div>
+                      ) : (
+                        <div
+                          className="dai-bar bar2 progress-bar "
+                          style={{ width: `${item.vote_average * 10}%` }}
+                        >
+                          <div className="progressDetails pt-3 d-flex">
+                            <p>
+                              {Math.floor(item.vote_average * 10)}{" "}
+                              <span className="fe100">%</span>
+                            </p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                     <h3 className="h6 ">{item.title || item.name}</h3>
                     <h3 className="h6 opacity-50">{item.release_date}</h3>
@@ -184,30 +181,31 @@ export default function Home() {
                       className="progress dai-progress  rounded-0"
                       role="progressbar"
                     >
-                    {
-                      Math.floor(item.vote_average*10) <= 70 ? <div
-                      className="dai-bar bar1 progress-bar "
-                      style={{ width: `${item.vote_average*10}%` }}
-                    >
-                      <div className="progressDetails pt-3 d-flex">
-                        <p>
-                        {Math.floor(item.vote_average*10)} <span className="fe100">%</span>
-                        </p>
-                      </div>
-                    </div> :<div
-                      className="dai-bar bar2 progress-bar "
-                      style={{ width: `${item.vote_average*10}%` }}
-                    >
-                      <div className="progressDetails pt-3 d-flex">
-                        <p>
-                        {Math.floor(item.vote_average*10)} <span className="fe100">%</span>
-                        </p>
-                      </div>
-                    </div>
-                    }
-
-
-                      
+                      {Math.floor(item.vote_average * 10) <= 70 ? (
+                        <div
+                          className="dai-bar bar1 progress-bar "
+                          style={{ width: `${item.vote_average * 10}%` }}
+                        >
+                          <div className="progressDetails pt-3 d-flex">
+                            <p>
+                              {Math.floor(item.vote_average * 10)}{" "}
+                              <span className="fe100">%</span>
+                            </p>
+                          </div>
+                        </div>
+                      ) : (
+                        <div
+                          className="dai-bar bar2 progress-bar "
+                          style={{ width: `${item.vote_average * 10}%` }}
+                        >
+                          <div className="progressDetails pt-3 d-flex">
+                            <p>
+                              {Math.floor(item.vote_average * 10)}{" "}
+                              <span className="fe100">%</span>
+                            </p>
+                          </div>
+                        </div>
+                      )}
                     </div>
                     <h3 className="h6 pt-1">{item.title || item.name}</h3>
                   </Link>
