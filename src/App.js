@@ -40,24 +40,15 @@ function App() {
   function storData() {
     let dataStor = JSON.parse(localStorage.getItem("userData"));
     setDataSava(dataStor);
-  
   }
   return (
     <>
       <header className="App-header">
-     
         <Navbar exit={logOut} sendDataShowNav={DataSava} />
       </header>
       <div className="">
         <Routes>
-        <Route
-            path="/"
-            element={
-         
-                <Noxe />
-           
-            }
-          />
+          <Route path="/" element={<Noxe />} />
 
           <Route
             path="/login"
@@ -67,68 +58,19 @@ function App() {
               </>
             }
           />
-          <Route
-            path="/home"
-            element={
-              <Bor>
-                <Home />
-              </Bor>
-            }
-          />
-          
+          <Route path="/home" element={<Home />} />
+
           <Route path="/active" element={<Active />}>
             <Route path=":emailVerify" element={<Active />} />
           </Route>
-          <Route
-            path="/moviesDetails"
-            element={
-              <Bor>
-                <MoviesDetails />
-              </Bor>
-            }
-          >
-            <Route
-              path=":id"
-              element={
-                <Bor>
-                  <MoviesDetails />
-                </Bor>
-              }
-            />
+          <Route path="/moviesDetails" element={<MoviesDetails />}>
+            <Route path=":id" element={<MoviesDetails />} />
           </Route>
-          <Route
-            path="/personDetails"
-            element={
-              <Bor>
-                <PersonDetails />
-              </Bor>
-            }
-          >
-            <Route
-              path=":id"
-              element={
-                <Bor>
-                  <PersonDetails />
-                </Bor>
-              }
-            />
+          <Route path="/personDetails" element={<PersonDetails />}>
+            <Route path=":id" element={<PersonDetails />} />
           </Route>
-          <Route
-            path="/tvDetails"
-            element={
-              <Bor>
-                <TvDetails />
-              </Bor>
-            }
-          >
-            <Route
-              path=":id"
-              element={
-                <Bor>
-                  <TvDetails />
-                </Bor>
-              }
-            />
+          <Route path="/tvDetails" element={<TvDetails />}>
+            <Route path=":id" element={<TvDetails />} />
           </Route>
 
           <Route
@@ -140,31 +82,9 @@ function App() {
             }
           />
 
-          <Route
-            path="/movies"
-            element={
-              <Bor>
-                <Movies />
-              </Bor>
-            }
-          />
-          <Route
-            path="/tvShow"
-            element={
-              <Bor>
-                <TvShow />
-              </Bor>
-            }
-          />
-          <Route
-            path="/people"
-            element={
-              <Bor>
-                <People />
-              </Bor>
-            }
-          />
-         
+          <Route path="/movies" element={<Movies />} />
+          <Route path="/tvShow" element={<TvShow />} />
+          <Route path="/people" element={<People />} />
         </Routes>
       </div>
       <Footer />
